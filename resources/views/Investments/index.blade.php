@@ -5,7 +5,7 @@
             <!-- <div class="col-md-8 col-md-offset-2"> -->
                 <div class="panel panel-default">
                     <div class="panel-heading">    <h1>Investments</h1>
-    <a href="{{url('/customers/create')}}" class="btn btn-success">Create Investments</a>
+    <a href="{{url('/investments/create')}}" class="btn btn-success">Create Investments</a>
     <hr>
      <div class="table-responsive"> 
 <!--     <table class="table table-striped table-bordered table-hover"> -->

@@ -4,18 +4,21 @@
         <div class="row">
             <!-- <div class="col-md-8 col-md-offset-2"> -->
                 <div class="panel panel-default">
-                    <div class="panel-heading">     <h1>Create New Investment</h1>
-    {!! Form::open(['url' => 'investments']) !!}
-                @if (count($errors) > 0)
+                    <div class="panel-heading"> 
+
+                    @if (count($errors) > 0)
                     <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
+                         <ul>
+                             @foreach ($errors->all() as $error)
+                                 <li>{{ $error }}</li>
+                             @endforeach
+                         </ul>
                     </div>
-                @endif
-                	
+                    @endif
+
+   <h1>Create Investments</h1>
+     {!! Form::open(['url' => 'investments']) !!}
+
        <div class="form-group">
         {!! Form::select('customer_id', $customers) !!}
     </div>
@@ -40,7 +43,7 @@
         {!! Form::label('recent_value', 'Recent Value:') !!}
         {!! Form::text('recent_value',null,['class'=>'form-control']) !!}
     </div>
-	<div class="form-group">
+    <div class="form-group">
         {!! Form::label('recent_date', 'Recent Date:') !!}
         {!! Form::text('recent_date',null,['class'=>'form-control']) !!}
     </div>
@@ -49,4 +52,5 @@
         {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
     </div>
     {!! Form::close() !!}
+
 @stop
