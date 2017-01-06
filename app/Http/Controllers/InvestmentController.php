@@ -103,6 +103,13 @@ class InvestmentController extends Controller
          if(Auth::check())
         {
          //
+                   $this->validate($request,[
+        'category'=>'required',
+        'description'=>'required',
+        'acquired_value'=>'required',
+        'acquired_date'=>'required',
+        // 'customer_id'=>'required',
+                  ]);
         $Investment= new Investment($request->all());
         $Investment=Investment::find($id);
         $Investment->update($request->all());

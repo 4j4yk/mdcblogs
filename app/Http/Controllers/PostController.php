@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Request;
+use Illuminate\Http\Request;
+use App\Http\Requests;
+//
 
 use App\Post;
 use Auth;
@@ -68,17 +69,21 @@ class PostController extends Controller
      *
      * @return Response
      */
-    public function store()
+    public function store(Request $request) 
     {
         
 
  if(Auth::check())
         {
 
-            $post=Request::all();
-            Post::create($post);
-            return redirect('posts');
+        $this->validate($request,[
+        'title'=>'required',
+        'description'=>'required',
+        ]);
 
+        $post=new Post($request->all());
+        $post->save();
+        return redirect('posts');
         }
         else
         {
@@ -94,8 +99,7 @@ class PostController extends Controller
 
         if(Auth::check())
         {
-
-             $post=Post::find($id);
+        $post=Post::find($id);
         return view('posts.edit',compact('post'));
         }
         else
@@ -110,15 +114,19 @@ class PostController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id)
+    public function update($id,Request $request)
     {
          if(Auth::check())
         {
 
+         $this->validate($request,[
+        'title'=>'required',
+        'description'=>'required',
+        ]);
         //
-        $postUpdate=Request::all();
+        $postUpdate= new Post($request->all());
         $post=Post::find($id);
-        $post->update($postUpdate);
+        $post->update($request->all());
         return redirect('posts');
         }
         else

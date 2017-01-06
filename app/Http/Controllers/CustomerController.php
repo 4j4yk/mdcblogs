@@ -72,15 +72,7 @@ class CustomerController extends Controller
         'zip'=>'required',
         'home_phone'=>'required',
         'cell_phone'=>'required',
-        // 'name',
-        // 'address',
-        // 'cust_number',
-        // 'city',
-        // 'state',
-        // 'zip',
-        // 'email',
-        // 'home_phone',
-        // 'cell_phone',
+      
           ]);
         
        $customer= new Customer($request->all());
@@ -118,7 +110,19 @@ class CustomerController extends Controller
         if(Auth::check())
         {
         //
-        $customer= new Customer($request->all());
+                $this->validate($request,[
+        'cust_number'=>'required',
+        'name'=>'required',
+        'email'=>'required',
+        'address'=>'required',
+        'city'=>'required',
+        'state'=>'required',
+        'zip'=>'required',
+        'home_phone'=>'required',
+        'cell_phone'=>'required',
+      
+          ]);
+      $customer= new Customer($request->all());
         $customer=Customer::find($id);
         $customer->update($request->all());
         return redirect('customers');

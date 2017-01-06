@@ -111,6 +111,14 @@ class StockController extends Controller
          if(Auth::check())
         {
            //
+        $this->validate($request,[
+        'symbol'=>'required',
+        'shares'=>'required',
+        'purchase_price'=>'required',
+        'purchased'=>'required',
+        // 'customer_id'=>'required',
+
+          ]);
         $stock= new Stock($request->all());
         $stock=Stock::find($id);
         $stock->update($request->all());

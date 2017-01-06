@@ -4,33 +4,33 @@
         <div class="row">
             <!-- <div class="col-md-8 col-md-offset-2"> -->
                 <div class="panel panel-default">
-                    <div class="panel-heading"> 
-    <h1>Update Stock</h1>
-    {!! Form::model($stock,['method' => 'PATCH','route'=>['stocks.update',$stock->id]]) !!}
-       <div class="form-group">
-        {!! Form::label('symbol', 'Symbol:') !!}
-        {!! Form::text('symbol',null,['class'=>'form-control']) !!}
+                    <div class="panel-heading">     <h1>Stock </h1>
+    <div class="container">
+        <table class="table table-striped table-bordered table-hover">
+            <tbody>
+            <tr class="bg-info">
+            <tr>
+                <td>Stock Symbol</td>
+                <td><?php echo ($stock['symbol']); ?></td>
+            </tr>
+            <tr>
+                <td>Stock Name</td>
+                <td><?php echo ($stock['name']); ?></td>
+            </tr>
+            <tr>
+                <td>Number of Shares</td>
+                <td><?php echo ($stock['shares']); ?></td>
+            </tr>
+            <tr>
+                <td>Purchase Price </td>
+                <td><?php echo ($stock['purchase_price']); ?></td>
+            </tr>
+            <tr>
+                <td>Date Purchased</td>
+                <td><?php echo ($stock['purchased']); ?></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
-    <div class="form-group">
-        {!! Form::label('name', 'St Name:') !!}
-        {!! Form::text('name',null,['class'=>'form-control']) !!}
-    </div>
-    <div class="form-group">
-        {!! Form::label('shares', 'Shares:') !!}
-        {!! Form::text('shares',null,['class'=>'form-control']) !!}
-    </div>
-    <div class="form-group">
-        {!! Form::label('purchase_price', 'Purchase Price:') !!}
-        {!! Form::text('purchase_price',null,['class'=>'form-control']) !!}
-    </div>
-    <div class="form-group">
-        {!! Form::label('purchased', 'Purchase Date:') !!}
-        {!! Form::text('purchased',null,['class'=>'form-control']) !!}
-    </div>
-
-    <div class="form-group">
-        {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
-    </div>
-    {!! Form::close() !!}
 @stop
 
