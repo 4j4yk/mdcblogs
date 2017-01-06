@@ -15,7 +15,9 @@
 		"sendgrid/sendgrid": "~5.0.9",
 		"maatwebsite/excel": "~2.1.0",
 		"barryvdh/laravel-debugbar": "^2.3",
-		"twilio/sdk": "^5.0"
+		"twilio/sdk": "^5.0",
+		"monolog/monolog": "1.*.*"
+		
 	},
 	
 	"require-dev": {
