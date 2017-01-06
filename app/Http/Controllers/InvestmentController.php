@@ -37,7 +37,6 @@ class InvestmentController extends Controller
         }
     }
 
-
     public function create()
     {
          if(Auth::check())
