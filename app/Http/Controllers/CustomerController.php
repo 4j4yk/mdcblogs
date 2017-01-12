@@ -148,17 +148,17 @@ class CustomerController extends Controller
 
 public function stringify($id)
 {
-   if(Auth::check())
-        {
+   // if(Auth::check())
+   //      {
          $customer = Customer::where('cust_number', $id)->select('cust_number','name','address','city','state','zip','home_phone','cell_phone')->first();
 
     $customer = $customer->toArray();
     return response()->json($customer);
-     }
-         else
-        {
-            return view('welcome');
-        }
+     // }
+     //     else
+     //    {
+     //        return view('welcome');
+     //    }
 }
 
 
