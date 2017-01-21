@@ -1,0 +1,33 @@
+{  
+   "homeLoanApplicaton":{  
+      "mortgageLoanCalculator":[  
+         {  
+            "monthlyIncome":"$7,900.00"
+         },
+         {  
+            "downPayment":"$35,000.00"
+         },
+         {  
+            "monthlyDebtPayments":"$2,500.00"
+         },
+         {  
+            "mortgageInterestRate":"3.80%"
+         },
+         {  
+            "name":[  
+               {  
+                  "first":"James",
+                  "middle":"J.",
+                  "last":"Mendiola"
+               }
+            ]
+         },
+         {  
+            "emailAddress":"jamesmendiola@gmail.com"
+         },
+         {  
+            "mobilePhoneNumber":"402-506-4952"
+         }
+      ]
+   }
+}

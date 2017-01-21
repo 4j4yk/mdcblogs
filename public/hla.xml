@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Home_Loan_Application>
+      <Mortgage_Loan_Calculator>
+          <Monthly_income>$7,900.00</Monthly_income>
+          <Down_Payment>$35,000.00</Down_Payment>
+          <Monthly_Debt_Payments>$2,500.00</Monthly_Debt_Payments>
+          <Mortgage_Interest_Rate>3.80%</Mortgage_Interest_Rate>
+          <Name>
+                <First>James</First>
+                <Middle>J.</Middle>
+                <Last>Mendiola</Last>
+          </Name>
+          <Email_address>jamesmendiola@gmail.com</Email_address>
+          <Mobile_Phone_Number>402-506-4952</Mobile_Phone_Number>
+      </Mortgage_Loan_Calculator>
+</Home_Loan_Application>
