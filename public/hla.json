@@ -2,6 +2,10 @@
    "homeLoanApplicaton":{  
       "mortgageLoanCalculator":[  
          {  
+            "Refinance":"No"
+         },
+    
+		 {  
             "monthlyIncome":"$7,900.00"
          },
          {  

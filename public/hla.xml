@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Home_Loan_Application>
       <Mortgage_Loan_Calculator>
+          <Refinance>No</Refinance>
           <Monthly_income>$7,900.00</Monthly_income>
           <Down_Payment>$35,000.00</Down_Payment>
           <Monthly_Debt_Payments>$2,500.00</Monthly_Debt_Payments>
